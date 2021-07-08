@@ -1,12 +1,12 @@
-import './erro.css'
 import { Link } from 'react-router-dom'
+import { Error } from './styledErro'
 
 export default function Erro() {
     return(
-        <div className='not-found'>
+        <Error>
             <h1>404</h1>
             <h2>Pagina não encontrada!</h2>
             <Link to='/'>Veja todos os filmes!</Link>
-        </div>
+        </Error>
     )
 }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import './home.css';
 import api from "../../services/api";
 import { Link } from "react-router-dom";
+import { Container } from './styledHome'
 
 export default function Home() {
   const [filmes, setFilmes] = useState([])
@@ -18,8 +18,8 @@ export default function Home() {
   },[])
 
     return (
-      <div className='container'>
-        <div className='lista-filmes'>
+      <Container>
+        <div>
           {filmes.map((filme)=>{
             return(
               <article key = {filme.id}>
@@ -30,7 +30,7 @@ export default function Home() {
             )
           })}
         </div>
-      </div>
+      </Container>
     );
   }
   

@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
-import './filme-info.css';
 import { useHistory, useParams } from 'react-router-dom';
 import api from '../../services/api';
 import { toast } from 'react-toastify';
+import { Filmess } from './styledFilmess'
+
 
 export default function Filme() {
     const { id } = useParams()
@@ -63,7 +64,7 @@ export default function Filme() {
         )
     }
     return (
-        <div className='filme-info'>
+        <Filmess>
             <h1>{Filme.nome}</h1>
             <img src={Filme.foto} alt={Filme.nome} />
 
@@ -78,6 +79,6 @@ export default function Filme() {
                     </a>
                 </button>
             </div>
-        </div>
+        </Filmess>
     )
 }

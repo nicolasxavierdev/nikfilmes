@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import './favoritos.css';
 import { toast } from "react-toastify";
+import { Favorito } from './styledFavorito'
 
 export default function Favoritos() {
     const [filmes, setFilmes] = useState([])
@@ -24,7 +24,7 @@ export default function Favoritos() {
     }
     
     return(
-        <div id='meus-filmes'>
+        <Favorito>
             <h1>Meus Filmes</h1>
 
             {filmes.length === 0 && <span>Você não possue nenhum filme salvo :( </span>}
@@ -43,6 +43,6 @@ export default function Favoritos() {
                     )
                 })}
             </ul>
-        </div>
+        </Favorito>
     )
 }

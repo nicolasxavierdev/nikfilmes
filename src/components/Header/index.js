@@ -1,11 +1,11 @@
-import './header.css';
 import { Link } from 'react-router-dom';
+import { Head } from './styledHeader'
 
 export default function Header(){
     return(
-        <header>
-            <Link className='logo' to='/'>NikFlix</Link>
-            <Link className='favoritos' to='/favoritos'>Salvos</Link>
-        </header>
+        <Head>
+            <Link to='/'>Filmaria</Link>
+            <Link to='/favoritos'>Salvos</Link>
+        </Head>
     )
 }
